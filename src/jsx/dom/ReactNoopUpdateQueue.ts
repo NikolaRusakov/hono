@@ -5,10 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const didWarnStateUpdateForUnmountedComponent = {};
+const didWarnStateUpdateForUnmountedComponent = {}
 
 function warnNoop(publicInstance, callerName) {
-  if (__DEV__) {
+  /* if (__DEV__) {
     const constructor = publicInstance.constructor;
     const componentName =
       (constructor && (constructor.displayName || constructor.name)) ||
@@ -26,7 +26,7 @@ function warnNoop(publicInstance, callerName) {
       componentName,
     );
     didWarnStateUpdateForUnmountedComponent[warningKey] = true;
-  }
+  } */
 }
 
 /**
@@ -41,7 +41,7 @@ const ReactNoopUpdateQueue = {
    * @final
    */
   isMounted: function (publicInstance) {
-    return false;
+    return false
   },
 
   /**
@@ -60,7 +60,7 @@ const ReactNoopUpdateQueue = {
    * @internal
    */
   enqueueForceUpdate: function (publicInstance, callback, callerName) {
-    warnNoop(publicInstance, 'forceUpdate');
+    warnNoop(publicInstance, 'forceUpdate')
   },
 
   /**
@@ -76,13 +76,8 @@ const ReactNoopUpdateQueue = {
    * @param {?string} callerName name of the calling function in the public API.
    * @internal
    */
-  enqueueReplaceState: function (
-    publicInstance,
-    completeState,
-    callback,
-    callerName,
-  ) {
-    warnNoop(publicInstance, 'replaceState');
+  enqueueReplaceState: function (publicInstance, completeState, callback, callerName) {
+    warnNoop(publicInstance, 'replaceState')
   },
 
   /**
@@ -97,14 +92,9 @@ const ReactNoopUpdateQueue = {
    * @param {?string} Name of the calling function in the public API.
    * @internal
    */
-  enqueueSetState: function (
-    publicInstance,
-    partialState,
-    callback,
-    callerName,
-  ) {
-    warnNoop(publicInstance, 'setState');
+  enqueueSetState: function (publicInstance, partialState, callback, callerName) {
+    warnNoop(publicInstance, 'setState')
   },
-};
+}
 
-export default ReactNoopUpdateQueue;
+export default ReactNoopUpdateQueue

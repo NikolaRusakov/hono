@@ -9,9 +9,9 @@ import ReactNoopUpdateQueue from './ReactNoopUpdateQueue'
 const assign = Object.assign
 
 const emptyObject = {}
-if (__DEV__) {
+/* f (__DEV__) {
   Object.freeze(emptyObject)
-}
+} */
 
 /**
  * Base class helpers for the updating state of a component.
@@ -91,7 +91,7 @@ Component.prototype.forceUpdate = function (callback) {
  * we would like to deprecate them, we're not going to move them over to this
  * modern base class. Instead, we define a getter that warns if it's accessed.
  */
-if (__DEV__) {
+/* if (__DEV__) {
   const deprecatedAPIs = {
     isMounted: [
       'isMounted',
@@ -121,7 +121,7 @@ if (__DEV__) {
       defineDeprecationWarning(fnName, deprecatedAPIs[fnName])
     }
   }
-}
+} */
 
 function ComponentDummy() {}
 ComponentDummy.prototype = Component.prototype
