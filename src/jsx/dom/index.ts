@@ -27,7 +27,7 @@ import { Suspense, ErrorBoundary } from './components'
 import { createContext } from './context'
 import { jsx, Fragment } from './jsx-runtime'
 import { flushSync, createPortal } from './render'
-
+import {Component } from './ReactBaseClasses'
 export { render } from './render'
 
 const createElement = (
@@ -96,6 +96,7 @@ export {
   cloneElement,
   Children,
   Fragment,
+  Component,
   DOMAttributes,
   flushSync,
   createPortal,
@@ -131,6 +132,7 @@ export default {
   cloneElement,
   Children,
   Fragment,
+  Component,
   flushSync,
   createPortal,
 }
