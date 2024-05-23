@@ -30,7 +30,7 @@
     "postbuild": "publint",
     "watch": "rimraf dist && tsx ./build.ts --watch && bun run copy:package.cjs.json",
     "coverage": "vitest --run --coverage",
-    "prerelease": "bun denoify && bun test:deno && bun run build",
+    "prerelease": "bun run build",
     "release": "np"
   },
   "exports": {

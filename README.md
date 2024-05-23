@@ -90,3 +90,8 @@ _RegExpRouter_, _SmartRouter_, _LinearRouter_, and _PatternRouter_ are created b
 ## License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
+
+```
+npm adduser --registry http://0.0.0.0:4873/ 
+<!-- npm install --registry http://localhost:4873 -->
+```
