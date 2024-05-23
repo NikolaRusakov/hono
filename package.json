@@ -525,7 +525,7 @@
     "url": "https://github.com/honojs/hono.git"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "http://localhost:4873"
   },
   "homepage": "https://hono.dev",
   "keywords": [
